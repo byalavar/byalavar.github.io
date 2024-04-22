@@ -59,8 +59,19 @@
            
           </a>
         </li>
-        </ul>
 
+        <li class="nav__list-item">
+          <a
+            href="mailto:kannayalavarthi1@gmail.com"
+            aria-label="email"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-email"></i>
+           
+          </a>
+        </li>
+        </ul>
+        
         <button type="button" aria-label="toggle theme" class="btn btn--icon">
           <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
         </button>
@@ -139,7 +150,7 @@
             <ul class="project__stack">
               <li class="project__stack-item">Vision Transformers</li>
               <li class="project__stack-item">Language Models</li>
-              <li class="project__stack-item">PyTorch</li>
+              <li class="project__stack-item">PyTorch Lightning</li>
             </ul>
 
             <!-- <a
@@ -160,14 +171,16 @@
 
           <div class="project">
             <h3>Efficient Deep Learning</h3>
-            <p class="project__description">
-                Decreased the inference latency of standard CNNs like ResNet, EfficientNet by 104% using integral image.
-                Applied quantization, low-precision inference, pruning, and knowledge distillation to reduce the inference time of deep networks
-            </p>
+            <ul class="project__description">
+               <li>Decreased the inference latency of standard CNNs like ResNet, EfficientNet by 104% using integral image.</li>  
+               <li>Regular filters in CNNs were repalced by box filter to improve the efficiency while maintaining the performance.</li> 
+               <li> Applied quantization, low-precision inference (4-bit), pruning, and knowledge distillation technqiues to further reduce the inference time of CNNs</li>
+            </ul>
             <ul class="project__stack">
               <li class="project__stack-item">CNN</li>
               <li class="project__stack-item">Knowledge Distillation</li>
               <li class="project__stack-item">Quantization</li>
+              <li class="project__stack-item">PyTorch</li>
             </ul>
 
             <!-- <a
@@ -188,14 +201,15 @@
 
           <div class="project">
             <h3>Active Learning on Medical Data using RL</h3>
-            <p class="project__description">
-                Used RL to actively train a CNN classifier for detecting diseases in the colon while maximizing the performance and minimizing the number of labeled samples required. 
-                The devised active learning framework was able to achieve similar performance to the baseline with only 41.8% of training data.
-            </p>
+            <ul class="project__description">
+                <li> Used RL to actively train a CNN classifier for detecting diseases in the colon while maximizing the performance and minimizing the number of labeled samples required. </li>
+                <li> The devised active learning framework was able to achieve similar performance to the baseline with only 41.8% of training data. </li>
+                </ul>
             <ul class="project__stack">
               <li class="project__stack-item">Reinforcement Learning</li>
               <li class="project__stack-item">Active Learning</li>
               <li class="project__stack-item">Computer Aided Diagnosis</li>
+              <li class="project__stack-item">PyTorch</li>
             </ul>
 <!-- 
             <a
@@ -215,15 +229,18 @@
           </div>
           <div class="project">
             <h3>Securing Face Analytics</h3>
-            <p class="project__description">
-            Discovered the inadvertent leakage of private information such as age, gender, and ethnicity in leading face template protection
-            techniques employed by face recognition systems. Formulated an FHE-based solution that reduces the privacy leakage by an average
-            of 35% compared to SOTA methods.
-            </p>
+            <ul class="project__description">
+            <li> Discovered the inadvertent leakage of private information such as age, gender, and ethnicity in leading face template protection
+            techniques employed by face recognition systems. </li>
+            <li> Formulated an FHE-based solution that reduces the privacy leakage by an average
+            of 35% compared to SOTA methods.</li>
+            </ul>
             <ul class="project__stack">
               <li class="project__stack-item">Face Analytics</li>
               <li class="project__stack-item">Privacy in Deep Learning</li>
               <li class="project__stack-item">FHE</li>
+              <li class="project__stack-item">TensorFlow</li>
+
             </ul>
 <!-- 
             <a
@@ -244,15 +261,17 @@
 
           <div class="project">
             <h3>Traffic Flow Optimization using Reinforcement Learning</h3>
-            <p class="project__description">
-            Developed a Multi-Agent RL solution to optimize traffic flow, achieving
-            a noteworthy 50% reduction in average vehicle waiting time compared to baseline at each traffic signal. This solution was tested over
-            5 real-world city maps having diverse traffic conditions and road layouts through simulation.
-            </p>
+            <ul class="project__description">
+              <li> Developed a Multi-Agent RL solution to optimize traffic flow, achieving
+            a noteworthy 50% reduction in average vehicle waiting time compared to baseline at each traffic signal. </li>
+            <li> This solution was tested over
+            5 real-world city maps having diverse traffic conditions and road layouts through simulation.</li>
+            </ul>
             <ul class="project__stack">
               <li class="project__stack-item">Reinforcement Learning</li>
               <li class="project__stack-item">PPO</li>
               <li class="project__stack-item">Traffic Optimization</li>
+              <li class="project__stack-item">PyTorch</li>
             </ul>
 <!-- 
             <a
@@ -274,13 +293,15 @@
           
           <div class="project">
             <h3>Secure Sleep Apnea Detection using CNN</h3>
-            <p class="project__description">
-                Devised an FFT based Convolutional layer, a fully connected layer, and pooling layers, leveraging SIMD operations in FHE for secure
-                detection of sleep apnea from encrypted ECG signals, achieving an accuracy of 99.3% and setting a new benchmark.
-            </p>
+            <ul class="project__description">
+             <li>   Devised an FFT based Convolutional layer, a fully connected layer, and pooling layers, leveraging SIMD operations in FHE to adapt CNNs
+              for encrypted inference. </li> 
+             
+              <li> Developed a secure sleep apnea detection system leveraging encrypted ECG signals, achieving an accuracy of 99.3% and setting a new benchmark. </li>
+            </ul>
             <ul class="project__stack">
               <li class="project__stack-item">CNN</li>
-              <li class="project__stack-item">Encrypted Inference</li>
+              <li class="project__stack-item">C++</li>
               <li class="project__stack-item">FHE</li>
             </ul>
 <!-- 
@@ -309,6 +330,7 @@
           <li class="skills__list-item btn btn--plain">Python</li>
           <li class="skills__list-item btn btn--plain">PyTorch</li>
           <li class="skills__list-item btn btn--plain">C++</li>
+          <li class="skills__list-item btn btn--plain">GO</li>
           <li class="skills__list-item btn btn--plain">CNNs</li>
           <li class="skills__list-item btn btn--plain">Transformers</li>
           <li class="skills__list-item btn btn--plain">LLMs</li>
@@ -330,12 +352,12 @@
       </section>
 
       <!-- Contact -->
-      <section class="section contact center" id="contact">
+      <!-- <section class="section contact center" id="contact">
         <h2 class="section__title">Contact</h2>
         <a href="mailto:kannayalavarthi1@gmail.com">
           <span class="btn btn--outline">Email me</span>
         </a>
-      </section>
+      </section> -->
     </main>
 
     <!-- <footer class="footer">
