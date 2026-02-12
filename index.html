@@ -1,389 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title>Bharat Yalavarthi</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="https://byalavar.github.io/" class="link"
-          >Bharat Yalavarthi</a
-        >
-      </h3>
-            
-
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="index1.html">Research</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#publications">Publications</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="resume.pdf">Resume</a>
-          </li>
-          <li class="nav__list-item">
-          <a
-            href="https://github.com/byalavar"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a
-            href="https://www.linkedin.com/in/bharat-yalavarthi/"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-           
-          </a>
-        </li>
-
-        <li class="nav__list-item">
-          <a
-            href="mailto:kannayalavarthi1@gmail.com"
-            aria-label="email"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-envelope"></i>
-           
-          </a>
-        </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Yalavarthi | PhD Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Bharat Yalavarthi</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests & Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
+    </nav>
 
     <main>
-      <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Bharat Yalavarthi</span></h1>
-        <h2 class="Machine Learning Researcher"></h2>
-        <p class="">
-        <br>
-          I am a graduate student at Unviersity at Buffalo, specializing in deep learning and computer vision.
-          My areas of research focus encompass enhancing the explainability of deep learning models, optimizing their learning capacities, and fortifying their efficiency 
-          and security measures.
-         <br>
-         I am currently employed as a research assistant at the University at Buffalo, focusing on enhancing the explainability, efficiency and security of deep learning models. 
-         <br>
-         Prior to this role, I served as a software engineer in Harman International's Connected Car R&D division. 
-         During my tenure, I contributed to the development of multiple functionalities for ADAS and route guidance systems. 
-         These include traffic sign recognition, intelligent speed and access restriction assistance, and the integration of user preferences, route modes and vehicle profiles.
-        </p>
+        <!-- Hero / Intro Section -->
+        <section id="about" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="profile.jpeg" alt="Bharat Yalavarthi" class="profile-photo">
+                    <div class="hero-text">
+                        <h1>Bharat Yalavarthi</h1>
+                        <p class="subtitle">PhD Student</p>
+                        <p class="affiliation">Department of Computer Science<br>University at Buffalo</p>
+                        <p class="intro">
+                            I am a second-year PhD student advised by Dr. Nalini Ratha and 
+                            Dr. Venu Govindaraju. 
+                            My research focuses on improving interpretability of deep learning models and using interpretability techniques to improve performance, robustness, safety, and fairness of deep learning models.
+                        </p>
+                        <div class="social-links">
+                            <a href="mailto:bharatcy2@gmail.com">Email</a>
+                            <a href="https://github.com/byalavar" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/bharat-yalavarthi" target="_blank">LinkedIn</a>
+                            <a href="https://scholar.google.com/citations?user=VLZTuaUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests & Education Section -->
+        <section id="interests" class="section">
+            <div class="container">
+                <div class="two-column-grid">
+                    <!-- Research Interests Column -->
+                    <div class="column">
+                        <h2>Research Interests</h2>
+                        <ul class="interests-list">
+                            <li class="interest-list-item">Interpretability</li>
+                            <li class="interest-list-item">Robustness</li>
+                            <li class="interest-list-item">Fairness</li>
+                            <li class="interest-list-item">AI Safety & Alignment</li>
+                            <li class="interest-list-item">Concept Bottleneck Models</li>
+                            <li class="interest-list-item">Multi-Modal Models</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div class="column">
+                        <h2>Education</h2>
+                        <ul class="education-list">
+                            <li class="education-item">
+                                <div class="edu-header">
+                                    <span class="edu-degree">Ph.D. in Computer Science</span>
+                                    <span class="edu-date">2023 – Present</span>
+                                </div>
+                                <span class="edu-school">University at Buffalo, SUNY</span>
+                                <p class="edu-details">Advisors: Dr. Nalini Ratha & Dr. Venu Govindaraju</p>
+                            </li>
+                            <li class="education-item">
+                                <div class="edu-header">
+                                    <span class="edu-degree">M.S. in Computer Science</span>
+                                    <span class="edu-date">2022 – 2024</span>
+                                </div>
+                                <span class="edu-school">University at Buffalo, SUNY</span>
+                            </li>
+                            <li class="education-item">
+                                <div class="edu-header">
+                                    <span class="edu-degree">B.Tech. in Computer Science</span>
+                                    <span class="edu-date">2016 – 2020</span>
+                                </div>
+                                <span class="edu-school">VIT Unviersity</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-        <br>
-      </div>
-      <section id="publications" class="section projects">
-       <h2 class="section__title">Publications</h2>
-       <div class="card">
-        <h3 class="card__title">Enhancing Privacy in Face Analytics Using Fully Homomorphic Encryption</h3>
-        <p class="card__author"><strong>Bharat Yalavarthi</strong>, Arjun Kaushik, Arun Ross, Vishnu Boddeti, Nalini Ratha </p>
-        <p class="card__date"><em>18th IEEE International Conference on Automatic Face and Gesture Recognition (IEEE FG 2024)</em></p>
-
-<!--         
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>  -->
-       
-       </div>
-      
-       <div class="card">
-        <h3 class="card__title">Confidential and Protected Disease Classifier using Fully Homomorphic Encryption</h3>
-        <p class="card__author">Aditya Malik, Nalini Ratha, <strong>Bharat Yalavarthi</strong>, Tilak Sharma, Arjun Ramesh Kaushik </p>
-        <p class="card__date">IEEE Conference on Artificial Intelligence (IEEE CAI 2024)</p>
-       
-        </div>
-
-      </section> 
-      <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <h3>Explaining Face Recongition using Vision-Language Models</h3>
-            
-            <ul class="project__description">
-              <li> Leveraged textual descriptions of facial features alongside vision language models
-                (VLM’s), such as CLIP, to align face images with descriptions. </li>
-              <li>  This approach facilitates novel explanations of decisions made by
-                face recognition systems while preserving the state-of-the-art performance. </li>
-            </ul>
-            <ul class="project__stack">
-              <li class="project__stack-item">Vision Transformers</li>
-              <li class="project__stack-item">Language Models</li>
-              <li class="project__stack-item">PyTorch Lightning</li>
-            </ul>
-
-            <!-- <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a> -->
-            <!-- <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
-
-          <div class="project">
-            <h3>Efficient Deep Learning</h3>
-            <ul class="project__description">
-               <li>Decreased the inference latency of standard CNNs like ResNet, EfficientNet by 104% using integral image.</li>  
-               <li>Regular filters in CNNs were repalced by box filter to improve the efficiency while maintaining the performance.</li> 
-               <li> Applied quantization, low-precision inference (4-bit), pruning, and knowledge distillation technqiues to further reduce the inference time of CNNs</li>
-            </ul>
-            <ul class="project__stack">
-              <li class="project__stack-item">CNN</li>
-              <li class="project__stack-item">Knowledge Distillation</li>
-              <li class="project__stack-item">Quantization</li>
-              <li class="project__stack-item">PyTorch</li>
-            </ul>
-
-            <!-- <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            > -->
-              <!-- <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
-
-          <div class="project">
-            <h3>Active Learning on Medical Data using RL</h3>
-            <ul class="project__description">
-                <li> Used RL to actively train a CNN classifier for detecting diseases in the colon while maximizing the performance and minimizing the number of labeled samples required. </li>
-                <li> The devised active learning framework was able to achieve similar performance to the baseline with only 41.8% of training data. </li>
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="container">
+                <h2>Publications</h2>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <span class="pub-title">Label-Free Mitigation of Spurious Correlations in VLMs Using Sparse Autoencoders</span>
+                        <span class="pub-authors"><strong>B.C Yalavarthi</strong>, N. Ratha, V. Govindaraju</span>
+                        <span class="pub-venue">ICLR 2026 - International Conference on Learning Representations</span>
+                        <div class="pub-links">
+                            <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title">Shielding Latent Face Representations From Privacy Attacks</span>
+                        <span class="pub-authors">A. R. Kaushik, <strong>B. C. Yalavarthi</strong>, A. Ross, V. Boddeti, N. Ratha</span>
+                        <span class="pub-venue">IEEE FG 2025 - International Conference on Automatic Face and Gesture Recognition</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2505.12688" target="_blank">Paper</a>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title">Aligning Characteristic Descriptors with Images for Human-Expert-like Explainability</span>
+                        <span class="pub-authors"><strong>B. C. Yalavarthi</strong>, N. Ratha</span>
+                        <span class="pub-venue">NeurIPS Workshop 2024 - Interpretable AI Workshop</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2411.04008" target="_blank">Paper</a>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title">Enhancing Privacy in Face Analytics Using Fully Homomorphic Encryption</span>
+                        <span class="pub-authors"><strong>B. Yalavarthi</strong>, A. R. Kaushik, A. Ross, V. Boddeti, N. Ratha</span>
+                        <span class="pub-venue">IEEE FG 2024 - International Conference on Automatic Face and Gesture Recognition</span>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2404.16255" target="_blank">Paper</a>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <span class="pub-title">Efficient Convolution Operator in FHE Using Summed Area Table</span>
+                        <span class="pub-authors"><strong>B. Yalavarthi</strong>, C. Jutla, N. Ratha</span>
+                        <span class="pub-venue">ICPR 2024 - International Conference on Pattern Recognition</span>
+                        <div class="pub-links">
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-78354-8_5" target="_blank">Paper</a>
+                        </div>
+                    </li>
                 </ul>
-                <br>
-            <ul class="project__stack">
-              <li class="project__stack-item">Reinforcement Learning</li>
-              <li class="project__stack-item">Active Learning</li>
-              <li class="project__stack-item">Computer Aided Diagnosis</li>
-              <li class="project__stack-item">PyTorch</li>
-            </ul>
-<!-- 
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
-          <div class="project">
-            <h3>Securing Face Analytics</h3>
-            <ul class="project__description">
-            <li> Discovered the inadvertent leakage of private information such as age, gender, and ethnicity in leading face template protection
-            techniques employed by face recognition systems. </li>
-            <li> Formulated an FHE-based solution that reduces the privacy leakage by an average
-            of 35% compared to SOTA methods.</li>
-            </ul>
-            <br>
-            <ul class="project__stack">
-              <li class="project__stack-item">Face Analytics</li>
-              <li class="project__stack-item">Privacy in Deep Learning</li>
-              <li class="project__stack-item">FHE</li>
-              <li class="project__stack-item">TensorFlow</li>
+            </div>
+        </section>
 
-            </ul>
-<!-- 
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
 
-          <div class="project">
-            <h3>Traffic Flow Optimization using Reinforcement Learning</h3>
-            <ul class="project__description">
-              <li> Developed a Multi-Agent RL solution to optimize traffic flow, achieving
-            a noteworthy 50% reduction in average vehicle waiting time compared to baseline at each traffic signal. </li>
-            <li> This solution was tested over
-            5 real-world city maps having diverse traffic conditions and road layouts through simulation.</li>
-            </ul>
-            <ul class="project__stack">
-              <li class="project__stack-item">Reinforcement Learning</li>
-              <li class="project__stack-item">PPO</li>
-              <li class="project__stack-item">Traffic Optimization</li>
-              <li class="project__stack-item">PyTorch</li>
-            </ul>
-<!-- 
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
 
-          
-          <div class="project">
-            <h3>Secure Sleep Apnea Detection using CNN</h3>
-            <ul class="project__description">
-             <li>   Devised an FFT based Convolutional layer, a fully connected layer, and pooling layers, leveraging SIMD operations in FHE to adapt CNNs
-              for encrypted inference. </li> 
-             
-              <li> Developed a secure sleep apnea detection system leveraging encrypted ECG signals, achieving an accuracy of 99.3% and setting a new benchmark. </li>
-            </ul>
-            <br>
-            <ul class="project__stack">
-              <li class="project__stack-item">CNN</li>
-              <li class="project__stack-item">C++</li>
-              <li class="project__stack-item">FHE</li>
-            </ul>
-<!-- 
-            <a
-              href="https://github.com"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://example.com"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a> -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">Python</li>
-          <li class="skills__list-item btn btn--plain">PyTorch</li>
-          <li class="skills__list-item btn btn--plain">C++</li>
-          <li class="skills__list-item btn btn--plain">GO</li>
-          <li class="skills__list-item btn btn--plain">CNNs</li>
-          <li class="skills__list-item btn btn--plain">Transformers</li>
-          <li class="skills__list-item btn btn--plain">LLMs</li>
-          <li class="skills__list-item btn btn--plain">VLMs</li>
-          <li class="skills__list-item btn btn--plain">OpenCV</li>
-          <li class="skills__list-item btn btn--plain">Numpy</li>
-          <li class="skills__list-item btn btn--plain">Tensorboard</li>
-          <li class="skills__list-item btn btn--plain">Explaianable AI</li>
-          <li class="skills__list-item btn btn--plain">Secure AI</li>
-          <li class="skills__list-item btn btn--plain">Hugging Face</li>
-          <li class="skills__list-item btn btn--plain">Sage Maker</li>
-          <li class="skills__list-item btn btn--plain">ElasticSearch</li>
-          <li class="skills__list-item btn btn--plain">Docker</li>
-          <li class="skills__list-item btn btn--plain">Kubernetes</li>
-          
-          
+        <!-- Experience Section -->
 
-        </ul>
-      </section>
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Experience</h2>
+                <ul class="experience-list">
+                    <li class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">Researcher</span>
+                            <span class="exp-date">Aug 2024 – Jan 2025</span>
+                        </div>
+                        <span class="exp-company">SUNY Research Foundation, Buffalo, NY</span>
+                        <p class="exp-description">
+                            Investigated visual cognitive alignment between LLMs and human perception. Leveraged Sparse Autoencoders for mechanistic interpretability to diagnose failure modes in multimodal LLMs.
+                        </p>
+                    </li>
+                    <li class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">Research Assistant</span>
+                            <span class="exp-date">Jan 2023 – May 2024</span>
+                        </div>
+                        <span class="exp-company">SUNY Research Foundation, Buffalo, NY</span>
+                        <p class="exp-description">
+                            Developed FHE-based privacy solutions for biometric systems, reducing attribute leakage by 35%. Designed kernel decomposition techniques achieving 43% reduction in CNN inference latency.
+                        </p>
+                    </li>
+                    <li class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">Software Engineer</span>
+                            <span class="exp-date">Jul 2020 - Oct 2022</span>
+                        </div>
+                        <span class="exp-company">Harman International</span>
+                        <p class="exp-description">
+                            Developed ADAS and route guidance systems for VW Trucks, reducing SW maintenance costs by 50%. Integrated traffic sign recognition module decreasing incorrect information by 90%.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-      <!-- Contact -->
-      <!-- <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:kannayalavarthi1@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section> -->
+
+
+        <!-- CV Section -->
+        <section id="cv" class="section">
+            <div class="container">
+                <h2>Curriculum Vitae</h2>
+                <p>Download my full CV for details on my education, experience, skills, and awards.</p>
+                <a href="cv.pdf" class="cv-button" target="_blank">Download CV (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>I'm open to research internships, collaborations, and discussions. Feel free to reach out!</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:bharatcy2@gmail.com">bharatcy2@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- <footer class="footer">
-      <a
-        href="https://github.com/byalavar/cleanfolio-minimal"
-        class="link footer__link"
-      >
-        
-      </a>
-    </footer> -->
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
 
-    <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
-    </div>
-    </div>
-
-    <script src="./script.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
