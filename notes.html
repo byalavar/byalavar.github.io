@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | Bharat Yalavarthi</title>
+    <meta name="description" content="Research notes on interpretability, sparse autoencoders, and model failure modes.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d1117' width='100' height='100' rx='15'/><text x='50' y='68' font-size='45' font-family='Arial' font-weight='bold' fill='%2358a6ff' text-anchor='middle'>BY</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">Bharat Yalavarthi</a></div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section page-section">
+            <div class="container prose">
+                <a href="index.html" class="back-link">&larr; Back</a>
+                <h1 class="page-title">Notes</h1>
+                <p class="page-meta">Short write-ups on interpretability, SAEs, and where models break.</p>
+
+                <ul class="notes-list">
+                    <!-- TEMPLATE: copy this block for each new note.
+                    <li class="note-item">
+                        <a class="note-title" href="notes/your-post.html">Post title</a>
+                        <span class="note-date">Month YYYY</span>
+                        <p class="note-summary">One or two sentences on what the post argues.</p>
+                    </li>
+                    -->
+                    <li class="note-item upcoming">
+                        <span class="note-title">Concepts don't converge: SAE feature formation across Gemma Scope scales</span>
+                        <span class="note-date">Coming soon</span>
+                        <p class="note-summary">
+                            Scaling an SAE doesn't resolve concepts into cleaner atoms &mdash; it fractally splits them into finer compositional pieces.
+                            Narrow models instead collapse high-frequency concepts into coarse superpositions. Notes on what this implies for feature
+                            counts, dictionary sizing, and how much to trust any single SAE's "concept."
+                        </p>
+                    </li>
+                    <li class="note-item upcoming">
+                        <span class="note-title">SAEs as a practical lever on model behavior</span>
+                        <span class="note-date">Coming soon</span>
+                        <p class="note-summary">
+                            The case for judging interpretability methods by the behavioral changes they enable rather than by whether they recover
+                            ground-truth features &mdash; using DIAL as the worked example.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bharat Yalavarthi</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAL | Bharat Yalavarthi</title>
+    <meta name="description" content="DIAL: label-free mitigation of spurious correlations in vision-language models using sparse autoencoders (ICLR 2026).">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d1117' width='100' height='100' rx='15'/><text x='50' y='68' font-size='45' font-family='Arial' font-weight='bold' fill='%2358a6ff' text-anchor='middle'>BY</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">Bharat Yalavarthi</a></div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="section page-section">
+            <div class="container prose">
+                <a href="index.html" class="back-link">&larr; Back</a>
+                <h1 class="page-title">DIAL: Label-Free Mitigation of Spurious Correlations in VLMs Using Sparse Autoencoders</h1>
+                <p class="page-meta">
+                    <strong>B. C. Yalavarthi</strong>, N. Ratha, V. Govindaraju &middot; ICLR 2026
+                </p>
+                <div class="social-links">
+                    <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
+                    <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a>
+                </div>
+
+                <h2>The problem</h2>
+                <p>
+                    CLIP-style models fail on specific groups because they lean on features that are correlated with the label in the training data
+                    but not causal for it &mdash; the water background instead of the bird, the imaging artifact instead of the lesion, gendered facial
+                    features instead of hair color. Existing fixes mostly require something the zero-shot setting is supposed to spare you:
+                    retraining, group labels, spurious-attribute labels, auxiliary data, or an LLM in the loop.
+                </p>
+
+                <h2>The idea</h2>
+                <p>
+                    If a spurious feature is a direction in representation space, you should be able to find that direction and delete it &mdash; without
+                    ever seeing a label. DIAL does this in three steps:
+                </p>
+                <ol class="prose-list">
+                    <li><strong>Disentangle.</strong> Pass VLM image embeddings through a pretrained sparse autoencoder to get a sparse, roughly monosemantic feature basis.</li>
+                    <li><strong>Identify.</strong> Score each SAE feature by how much more it fires on samples exhibiting the spurious attribute (partitioned using the VLM's own zero-shot predictions as pseudo-labels), weighted by how well the feature direction aligns with the attribute's text embedding. Keep the features accounting for a fraction &alpha; of the total attribution mass.</li>
+                    <li><strong>Label-free removal.</strong> Build an orthonormal basis for the spurious subspace and project it out of the affected embeddings &mdash; applied only to candidate samples flagged as likely biased (centroid distance + k-NN disagreement), so clean samples are left untouched.</li>
+                </ol>
+                <p>
+                    <strong>DIAL+</strong> removes the last remaining input: instead of being told which attributes are spurious, it finds them, by intersecting
+                    features whose ablation flips a prediction with the samples that look biased.
+                </p>
+
+                <h2>What it buys you</h2>
+                <ul class="prose-list">
+                    <li>No training, no fine-tuning, no class labels, no spurious-feature labels, no auxiliary data, no external LLM.</li>
+                    <li>Consistent worst-group accuracy gains across CelebA, Waterbirds, FMOW, ISIC, and COVID-19 &mdash; matching or beating baselines that <em>do</em> use labels and extra data.</li>
+                    <li>Fairer image retrieval: MaxSkew@1000 on FairFace drops across age, gender, and ethnicity.</li>
+                    <li>Every intervention is inspectable. You can name the feature you removed, which matters in high-stakes settings.</li>
+                </ul>
+
+                <h2>Two findings worth flagging</h2>
+                <p>
+                    <strong>Orthogonal projection beats neuron ablation.</strong> Zeroing the identified activations leaves residual spurious structure behind;
+                    removing the whole subspace catches aligned features you never explicitly identified.
+                </p>
+                <p>
+                    <strong>Selective intervention beats blanket intervention.</strong> Applying subspace removal globally degrades samples that weren't
+                    relying on the spurious feature in the first place. Targeting only flagged candidates recovers most of the gap
+                    (e.g. Waterbirds ViT-L/14: 51.6 &rarr; 69.2 worst-group).
+                </p>
+
+                <h2>Citation</h2>
+                <pre class="citation">@inproceedings{yalavarthi2026dial,
+  title     = {Label-Free Mitigation of Spurious Correlations in VLMs Using Sparse Autoencoders},
+  author    = {Yalavarthi, Bharat Chandra and Ratha, Nalini and Govindaraju, Venu},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026}
+}</pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bharat Yalavarthi</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
