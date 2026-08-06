@@ -38,13 +38,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         navItems.forEach(item => {
-            item.style.color = '';
-            if (item.getAttribute('href') === `#${current}`) {
-                item.style.color = '#e6edf3';
-            }
+            item.classList.toggle('active-link', item.getAttribute('href') === `#${current}`);
         });
     }
 
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
+
+    // Light / dark mode toggle
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem('theme'); } catch (e) { /* storage unavailable */ }
+
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+        root.setAttribute('data-theme', 'light');
+    }
+
+    function updateThemeIcon() {
+        if (!themeBtn) return;
+        // moon shown in light mode (click to go dark), sun shown in dark mode
+        themeBtn.innerHTML = root.getAttribute('data-theme') === 'light' ? '&#9789;' : '&#9728;';
+    }
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+            const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            if (next === 'light') {
+                root.setAttribute('data-theme', 'light');
+            } else {
+                root.removeAttribute('data-theme');
+            }
+            try { localStorage.setItem('theme', next); } catch (e) { /* storage unavailable */ }
+            updateThemeIcon();
+        });
+    }
+    updateThemeIcon();
 });

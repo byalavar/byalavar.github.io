@@ -6,20 +6,27 @@
     <title>DIAL | Bharat Yalavarthi</title>
     <meta name="description" content="DIAL: label-free mitigation of spurious correlations in vision-language models using sparse autoencoders (ICLR 2026).">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d1117' width='100' height='100' rx='15'/><text x='50' y='68' font-size='45' font-family='Arial' font-weight='bold' fill='%2358a6ff' text-anchor='middle'>BY</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-brand"><a href="index.html">Bharat Yalavarthi</a></div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-toggle" aria-label="toggle light and dark mode" title="Toggle light / dark mode">&#9789;</button>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
         <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
             <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#education">Education</a></li>
             <li><a href="notes.html">Notes</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -32,51 +39,58 @@
                     <strong>B. C. Yalavarthi</strong>, N. Ratha, V. Govindaraju &middot; ICLR 2026
                 </p>
                 <div class="social-links">
-                    <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
-                    <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a>
+                    <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank" class="btn-primary" aria-label="Paper">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914Z"/></svg>
+                        Paper
+                    </a>
+                    <a href="https://github.com/byalavar/DIAL" target="_blank" aria-label="Code">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                        Code
+                    </a>
+                    <a href="dial_poster.pdf" target="_blank" aria-label="Poster">
+                        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v8.5A1.75 1.75 0 0 1 14.25 12h-5.5v1.44l2.28 2.28a.75.75 0 1 1-1.06 1.06L8 14.81l-1.97 1.97a.75.75 0 0 1-1.06-1.06l2.28-2.28V12h-5.5A1.75 1.75 0 0 1 0 10.25Zm1.75-.25a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25Z"/></svg>
+                        Poster
+                    </a>
                 </div>
 
                 <h2>The problem</h2>
                 <p>
-                    CLIP-style models fail on specific groups because they lean on features that are correlated with the label in the training data
-                    but not causal for it &mdash; the water background instead of the bird, the imaging artifact instead of the lesion, gendered facial
-                    features instead of hair color. Existing fixes mostly require something the zero-shot setting is supposed to spare you:
-                    retraining, group labels, spurious-attribute labels, auxiliary data, or an LLM in the loop.
+                    CLIP-style models often predict from features that are correlated with the label but not causal for it.
+                    The model looks at the water background instead of the bird, the imaging artifact instead of the lesion,
+                    or the gender instead of the hair color. These shortcuts fail exactly on the groups where reliability matters.
+                    Most existing fixes need retraining, labels, extra data, or an LLM in the loop, which takes away the zero-shot
+                    advantage these models are used for.
                 </p>
 
-                <h2>The idea</h2>
-                <p>
-                    If a spurious feature is a direction in representation space, you should be able to find that direction and delete it &mdash; without
-                    ever seeing a label. DIAL does this in three steps:
-                </p>
+                <h2>The method</h2>
+                <p>DIAL removes the shortcut directly from the image embeddings, in three steps.</p>
                 <ol class="prose-list">
-                    <li><strong>Disentangle.</strong> Pass VLM image embeddings through a pretrained sparse autoencoder to get a sparse, roughly monosemantic feature basis.</li>
-                    <li><strong>Identify.</strong> Score each SAE feature by how much more it fires on samples exhibiting the spurious attribute (partitioned using the VLM's own zero-shot predictions as pseudo-labels), weighted by how well the feature direction aligns with the attribute's text embedding. Keep the features accounting for a fraction &alpha; of the total attribution mass.</li>
-                    <li><strong>Label-free removal.</strong> Build an orthonormal basis for the spurious subspace and project it out of the affected embeddings &mdash; applied only to candidate samples flagged as likely biased (centroid distance + k-NN disagreement), so clean samples are left untouched.</li>
+                    <li><strong>Disentangle.</strong> A pretrained sparse autoencoder maps the embeddings into a sparse feature basis where individual directions are interpretable.</li>
+                    <li><strong>Identify.</strong> Each feature gets a score based on how strongly it fires on samples with the spurious attribute and how well its direction aligns with the attribute text embedding. The top scoring features span the spurious subspace.</li>
+                    <li><strong>Remove.</strong> The spurious subspace is projected out of the embeddings. Only samples flagged as likely biased are modified, so clean samples stay untouched.</li>
                 </ol>
                 <p>
-                    <strong>DIAL+</strong> removes the last remaining input: instead of being told which attributes are spurious, it finds them, by intersecting
-                    features whose ablation flips a prediction with the samples that look biased.
+                    <strong>DIAL+</strong> removes the last requirement. It detects the spurious attributes on its own,
+                    so the method needs nothing beyond the embeddings.
                 </p>
+                <figure class="page-fig">
+                    <img src="images/dial_architecture.png" alt="DIAL pipeline: VLM embeddings pass through an SAE encoder-decoder; spurious feature neuron attribution builds a spurious subspace, candidate samples are selected by centroid filtering and k-NN, and orthogonal projection produces debiased embeddings">
+                    <figcaption>The DIAL pipeline: disentangle with an SAE, identify the spurious directions, project them out.</figcaption>
+                </figure>
 
-                <h2>What it buys you</h2>
-                <ul class="prose-list">
-                    <li>No training, no fine-tuning, no class labels, no spurious-feature labels, no auxiliary data, no external LLM.</li>
-                    <li>Consistent worst-group accuracy gains across CelebA, Waterbirds, FMOW, ISIC, and COVID-19 &mdash; matching or beating baselines that <em>do</em> use labels and extra data.</li>
-                    <li>Fairer image retrieval: MaxSkew@1000 on FairFace drops across age, gender, and ethnicity.</li>
-                    <li>Every intervention is inspectable. You can name the feature you removed, which matters in high-stakes settings.</li>
-                </ul>
-
-                <h2>Two findings worth flagging</h2>
+                <h2>Results</h2>
                 <p>
-                    <strong>Orthogonal projection beats neuron ablation.</strong> Zeroing the identified activations leaves residual spurious structure behind;
-                    removing the whole subspace catches aligned features you never explicitly identified.
+                    Across CelebA, Waterbirds, FMOW, ISIC and COVID-19, DIAL matches or beats baselines that rely on labels,
+                    extra data or LLMs, with consistent gains in worst-group accuracy. Two choices matter for this: projecting
+                    out the whole subspace works better than zeroing individual features, and intervening only on flagged samples
+                    works better than intervening everywhere. The method also makes retrieval fairer, reducing MaxSkew@1000 on
+                    FairFace across age, gender and ethnicity. And since every removed feature has a name, the whole intervention
+                    can be inspected.
                 </p>
-                <p>
-                    <strong>Selective intervention beats blanket intervention.</strong> Applying subspace removal globally degrades samples that weren't
-                    relying on the spurious feature in the first place. Targeting only flagged candidates recovers most of the gap
-                    (e.g. Waterbirds ViT-L/14: 51.6 &rarr; 69.2 worst-group).
-                </p>
+                <figure class="page-fig">
+                    <img src="images/dial_results.jpg" alt="Attention heatmaps on CelebA and Waterbirds: CLIP zero-shot attends to facial features and backgrounds, while DIAL shifts attention to hair and the bird">
+                    <figcaption>Where the model looks, before and after. CLIP zero-shot attends to facial features and backgrounds; DIAL shifts attention to the hair and the bird.</figcaption>
+                </figure>
 
                 <h2>Citation</h2>
                 <pre class="citation">@inproceedings{yalavarthi2026dial,
@@ -91,7 +105,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Bharat Yalavarthi</p>
+            <p>&copy; 2026 Bharat Yalavarthi &middot; <a href="mailto:bharatcy2@gmail.com">bharatcy2@gmail.com</a></p>
         </div>
     </footer>
 

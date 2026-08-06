@@ -6,21 +6,28 @@
     <title>Bharat Yalavarthi | Interpretability Researcher</title>
     <meta name="description" content="Bharat Yalavarthi — PhD student at the University at Buffalo working on mechanistic interpretability, sparse autoencoders, and model robustness.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230d1117' width='100' height='100' rx='15'/><text x='50' y='68' font-size='45' font-family='Arial' font-weight='bold' fill='%2358a6ff' text-anchor='middle'>BY</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-brand">Bharat Yalavarthi</div>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-toggle" aria-label="toggle light and dark mode" title="Toggle light / dark mode">&#9789;</button>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#publications">Publications</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!-- <li><a href="#projects">Projects</a></li> -->
+            
+            <!-- <li><a href="notes.html">Notes</a></li> -->
         </ul>
     </nav>
 
@@ -32,121 +39,71 @@
                     <img src="profile.jpeg" alt="Bharat Yalavarthi" class="profile-photo">
                     <div class="hero-text">
                         <h1>Bharat Yalavarthi</h1>
-                        <p class="tagline">Interpretability research, applied to the places models fail.</p>
-                        <p class="affiliation">PhD Student, Department of Computer Science &middot; University at Buffalo, SUNY</p>
+                        <p class="tagline">Interpretability &middot; Alignment</p>
+                        <p class="affiliation">PhD Student &middot; University at Buffalo, SUNY</p>
                         <p class="intro">
-                            I work on mechanistic interpretability &mdash; sparse autoencoders, feature attribution, and probing &mdash; advised by
+                            I am interested in intepreting deep learning models, and in using interpretability techniques to improve them.
+                            This includes making models more robust and better aligned, and building evaluation benchmarks that reveal
+                            where they fail. I am advised by
                             <a href="https://cse.buffalo.edu/~nratha/" target="_blank">Dr. Nalini Ratha</a> and
                             <a href="https://cse.buffalo.edu/~govind/" target="_blank">Dr. Venu Govindaraju</a>.
-                            I'm interested in interpretability as a means to an end: identifying the internal features behind a model's
-                            failure modes, then editing them to improve robustness, safety, and fairness. My recent work does this without
-                            labels, retraining, or extra data.
                         </p>
-                        <p class="status"><strong>Seeking research internships</strong> in interpretability and AI safety, Fall 2026 onward.</p>
+                        <p class="status"><strong>Looking for research internships &mdash; Fall 2026 onward.</p>
                         <div class="social-links">
-                            <a href="mailto:bharatcy2@gmail.com">Email</a>
-                            <a href="https://github.com/byalavar" target="_blank">GitHub</a>
-                            <a href="https://www.linkedin.com/in/bharat-yalavarthi" target="_blank">LinkedIn</a>
-                            <a href="https://scholar.google.com/citations?user=VLZTuaUAAAAJ&hl=en" target="_blank">Scholar</a>
-                            <a href="Resume_Bharat.pdf" target="_blank">CV</a>
+                            <a href="mailto:bharatcy2@gmail.com" aria-label="Email">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.75 3h12.5c.966 0 1.75.784 1.75 1.75v6.5A1.75 1.75 0 0 1 14.25 13H1.75A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3ZM1.5 4.75v.53l6.5 3.9 6.5-3.9v-.53a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm13 2.28-5.85 3.51a1.25 1.25 0 0 1-1.3 0L1.5 7.03v4.22c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"/></svg>
+                                Email
+                            </a>
+                            <a href="https://github.com/byalavar" target="_blank" aria-label="GitHub">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/bharat-yalavarthi" target="_blank" aria-label="LinkedIn">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14.82 0H1.18A1.17 1.17 0 0 0 0 1.15v13.7A1.17 1.17 0 0 0 1.18 16h13.64A1.17 1.17 0 0 0 16 14.85V1.15A1.17 1.17 0 0 0 14.82 0ZM4.74 13.63H2.36V6h2.38ZM3.55 4.96a1.38 1.38 0 1 1 0-2.76 1.38 1.38 0 0 1 0 2.76Zm10.08 8.67h-2.37V9.92c0-.89-.02-2.03-1.24-2.03-1.24 0-1.43.97-1.43 1.97v3.77H6.22V6H8.5v1.04h.03a2.5 2.5 0 0 1 2.25-1.23c2.4 0 2.85 1.58 2.85 3.64Z"/></svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=VLZTuaUAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1 .5 4.5 8 8l6-2.8v4.05a.75.75 0 0 0 1.5 0V4.5L8 1ZM3 6.9v2.85c0 .55.9 1.3 2.4 1.8 1 .33 2.2.5 2.6.5s1.6-.17 2.6-.5c1.5-.5 2.4-1.25 2.4-1.8V6.9L8 9.3 3 6.9Z"/></svg>
+                                Scholar
+                            </a>
+                            <a href="Resume_Bharat.pdf" target="_blank" class="btn-primary" aria-label="Curriculum Vitae">
+                                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914Z"/></svg>
+                                CV
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- News / Updates Feed -->
-        <section id="news" class="section">
-            <div class="container">
-                <h2>News</h2>
-                <ul class="news-list">
-                    <li class="news-item">
-                        <span class="news-date">Jan 2026</span>
-                        <span class="news-body">DIAL accepted to <strong>ICLR 2026</strong> &mdash; label-free mitigation of spurious correlations in VLMs using sparse autoencoders. <a href="dial.html">Project page</a>.</span>
-                    </li>
-                    <li class="news-item">
-                        <span class="news-date">2025</span>
-                        <span class="news-body">One paper under review at <strong>NeurIPS 2025</strong>; two further interpretability projects in progress.</span>
-                    </li>
-                    <li class="news-item">
-                        <span class="news-date">May 2025</span>
-                        <span class="news-body">&ldquo;Shielding Latent Face Representations From Privacy Attacks&rdquo; accepted at <strong>IEEE FG 2025</strong>.</span>
-                    </li>
-                    <li class="news-item">
-                        <span class="news-date">Jan 2025</span>
-                        <span class="news-body">Started my PhD at the University at Buffalo, supported by the <strong>UB Presidential Fellowship</strong>.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
 
-        <!-- Projects Section (Fel-style visual cards) -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-list">
-                    <article class="project-card">
-                        <a class="project-thumb" href="dial.html">
-                            <img src="images/dial-heatmaps.png" alt="CLIP attention heatmaps showing reliance on spurious image regions across ISIC, COVID-19, CelebA, and Waterbirds">
-                        </a>
-                        <div class="project-body">
-                            <div class="project-head">
-                                <h3><a href="dial.html">DIAL</a></h3>
-                                <span class="project-venue">ICLR 2026</span>
-                            </div>
-                            <p class="project-summary">
-                                A zero-shot, label-free method that uses a sparse autoencoder to isolate spurious feature directions inside
-                                VLM embeddings and removes them by orthogonal projection &mdash; improving worst-group accuracy across five
-                                benchmarks with no training, labels, or auxiliary data.
-                            </p>
-                            <div class="pub-links">
-                                <a href="dial.html">Project page</a>
-                                <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
-                                <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a>
-                            </div>
-                        </div>
-                    </article>
 
-                    <article class="project-card">
-                        <a class="project-thumb project-thumb--placeholder" href="notes.html">
-                            <span>Write-up<br>coming soon</span>
-                        </a>
-                        <div class="project-body">
-                            <div class="project-head">
-                                <h3>SAE Concept Formation Across Scale</h3>
-                                <span class="project-venue">In progress</span>
-                            </div>
-                            <p class="project-summary">
-                                Probing how concepts organize in SAE latents across Gemma Scope model scales. Scaling appears to yield fractal
-                                compositional expansion rather than convergence to atomic features; narrow models collapse high-frequency
-                                concepts into coarse superpositions.
-                            </p>
-                            <div class="pub-links">
-                                <a href="notes.html">Notes</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
 
-        <!-- Publications Section (grouped, with one-line summaries) -->
+
+
+
+
+        <!-- Two-column layout: main content + news sidebar -->
+        <div class="layout-wrap">
+            <div class="layout-grid">
+                <div class="main-col">
+        <!-- Publications -->
         <section id="publications" class="section">
             <div class="container">
                 <h2>Publications</h2>
                 <p class="section-note">Full list on <a href="https://scholar.google.com/citations?user=VLZTuaUAAAAJ&hl=en" target="_blank">Google Scholar</a>. (* equal contribution)</p>
 
-                <h3 class="pub-group-heading">Interpretability &amp; Safety</h3>
+                <h3 class="pub-group-heading">Interpretability</h3>
                 <ul class="publication-list">
                     <li class="publication-item">
                         <span class="pub-title">Label-Free Mitigation of Spurious Correlations in VLMs Using Sparse Autoencoders</span>
                         <span class="pub-authors"><strong>B. C. Yalavarthi</strong>, N. Ratha, V. Govindaraju</span>
                         <span class="pub-venue">ICLR 2026</span>
-                        <span class="pub-tldr">Finds spurious feature directions in an SAE basis and projects them out of VLM embeddings &mdash; fully zero-shot, no labels or retraining.</span>
+                        <span class="pub-tldr">Finds spurious feature directions in SAE basis and projects them out of VLM representations &mdash; fully zero-shot, no labels or retraining.</span>
                         <div class="pub-links">
-                            <a href="dial.html">Project page</a>
+                            <!-- <a href="dial.html">Project page</a> -->
                             <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
-                            <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a>
+                            <!-- <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a> -->
                         </div>
                     </li>
                     <li class="publication-item">
@@ -173,7 +130,7 @@
                     </li>
                     <li class="publication-item">
                         <span class="pub-title">Enhancing Privacy in Face Analytics Using Fully Homomorphic Encryption</span>
-                        <span class="pub-authors"><strong>B. Yalavarthi</strong>, A. R. Kaushik, A. Ross, V. Boddeti, N. Ratha</span>
+                        <span class="pub-authors"><strong>B. Yalavarthi <sup>*</sup></strong>, A. R. Kaushik <sup>*</sup>, A. Ross, V. Boddeti, N. Ratha</span>
                         <span class="pub-venue">IEEE FG 2024</span>
                         <span class="pub-tldr">An FHE-based scheme that cuts attribute leakage from face templates by 35% over prior work with no accuracy loss.</span>
                         <div class="pub-links">
@@ -193,22 +150,54 @@
             </div>
         </section>
 
-        <!-- Experience + Education -->
+
+
+   <!-- Education -->
+   <section id="education" class="section">
+    <div class="container">
+        <h2>Education</h2>
+        <ul class="education-list">
+            <li class="education-item">
+                <div class="edu-header">
+                    <span class="edu-degree">Ph.D. in Computer Science</span>
+                    <span class="edu-date">2025 &ndash; Present</span>
+                </div>
+                <span class="edu-school">University at Buffalo, SUNY &mdash; UB Presidential Fellowship</span>
+                <p class="edu-details">Advisors: Dr. Nalini Ratha &amp; Dr. Venu Govindaraju</p>
+            </li>
+            <li class="education-item">
+                <div class="edu-header">
+                    <span class="edu-degree">M.S. in Computer Science</span>
+                    <span class="edu-date">2022 &ndash; 2024</span>
+                </div>
+                <span class="edu-school">University at Buffalo, SUNY</span>
+            </li>
+            <li class="education-item">
+                <div class="edu-header">
+                    <span class="edu-degree">B.Tech. in Computer Science</span>
+                    <span class="edu-date">2016 &ndash; 2020</span>
+                </div>
+                <span class="edu-school">Vellore Institute of Technology (VIT)</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+        <!-- Experience -->
         <section id="experience" class="section">
             <div class="container">
                 <h2>Experience</h2>
                 <ul class="experience-list">
-                    <li class="experience-item">
+                    <!-- <li class="experience-item">
                         <div class="exp-header">
                             <span class="exp-title">PhD Student</span>
                             <span class="exp-date">Jan 2025 &ndash; Present</span>
                         </div>
                         <span class="exp-company">University at Buffalo, SUNY</span>
                         <p class="exp-description">
-                            Mechanistic interpretability of vision-language and language models. SAE-based mitigation of spurious correlations (ICLR 2026);
-                            entropy regularization for concept bottleneck models; probing SAE concept formation across Gemma Scope scales.
+                           Interpretability
                         </p>
-                    </li>
+                    </li> -->
                     <li class="experience-item">
                         <div class="exp-header">
                             <span class="exp-title">Researcher</span>
@@ -216,8 +205,7 @@
                         </div>
                         <span class="exp-company">SUNY Research Foundation, Buffalo, NY</span>
                         <p class="exp-description">
-                            Built a Gestalt-grounded benchmark (1,200+ stimuli, 4 perceptual principles) that surfaces visual reasoning failures in
-                            current MLLMs which standard VQA benchmarks don't catch. Stress-tested vision encoders to locate where perception, rather than language, breaks down.
+                            Benchmarking and Evaluating MLLMs on Visual Tasks.
                         </p>
                     </li>
                     <li class="experience-item">
@@ -227,8 +215,7 @@
                         </div>
                         <span class="exp-company">SUNY Research Foundation, Buffalo, NY</span>
                         <p class="exp-description">
-                            Human-expert-like explanations for face and medical predictions using Mistral-7B and CLIP (NeurIPS-W 2024).
-                            FHE-based privacy solutions for biometric systems, cutting attribute leakage by 35% with no accuracy loss.
+                         Human Expert-like Explainability, Privacy Preserving ML, Fully Homomorphic Encryption
                         </p>
                     </li>
                     <li class="experience-item">
@@ -238,56 +225,93 @@
                         </div>
                         <span class="exp-company">Harman International (Samsung)</span>
                         <p class="exp-description">
-                            Delivered 20+ ADAS and route guidance features for VW Trucks/Coaches; modular redesign cut software maintenance costs by 25%.
-                            Integrated an onboard traffic sign recognition module, reducing incorrect sign events by 90%.
+                            Delivered 20+ ADAS and route guidance features for VW Trucks/Coaches. Modular redesign cut software maintenance costs by 25%.
+        
                         </p>
                     </li>
                 </ul>
-
-                <h2 class="subsection-heading">Education</h2>
-                <ul class="education-list">
-                    <li class="education-item">
-                        <div class="edu-header">
-                            <span class="edu-degree">Ph.D. in Computer Science</span>
-                            <span class="edu-date">2025 &ndash; Present</span>
-                        </div>
-                        <span class="edu-school">University at Buffalo, SUNY &mdash; UB Presidential Fellowship</span>
-                        <p class="edu-details">Advisors: Dr. Nalini Ratha &amp; Dr. Venu Govindaraju</p>
-                    </li>
-                    <li class="education-item">
-                        <div class="edu-header">
-                            <span class="edu-degree">M.S. in Computer Science</span>
-                            <span class="edu-date">2022 &ndash; 2024</span>
-                        </div>
-                        <span class="edu-school">University at Buffalo, SUNY</span>
-                    </li>
-                    <li class="education-item">
-                        <div class="edu-header">
-                            <span class="edu-degree">B.Tech. in Computer Science</span>
-                            <span class="edu-date">2016 &ndash; 2020</span>
-                        </div>
-                        <span class="edu-school">Vellore Institute of Technology (VIT)</span>
-                    </li>
-                </ul>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+        <!-- Projects
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Contact</h2>
-                <p>I'm looking for research internships in interpretability and AI safety, and happy to talk about SAEs, feature attribution, or model failure modes.</p>
-                <div class="contact-info">
-                    <p><strong>Email:</strong> <a href="mailto:bharatcy2@gmail.com">bharatcy2@gmail.com</a></p>
-                    <p><strong>CV:</strong> <a href="Resume_Bharat.pdf" target="_blank">Download (PDF)</a></p>
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <article class="project-card">
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3><a href="dial.html">DIAL</a></h3>
+                                <span class="project-venue">ICLR 2026</span>
+                            </div>
+                            <p class="project-summary">
+                                A zero-shot, label-free method that uses a sparse autoencoder to isolate spurious feature directions inside
+                                VLM embeddings and removes them by orthogonal projection &mdash; improving worst-group accuracy across five
+                                benchmarks with no training, labels, or auxiliary data.
+                            </p>
+                            <div class="pub-links">
+                                <a href="dial.html">Project page</a>
+                                <a href="https://openreview.net/forum?id=NHOLsaHuFv" target="_blank">Paper</a>
+                                <a href="https://github.com/byalavar/DIAL" target="_blank">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3>SAE Concept Formation Across Scale</h3>
+                                <span class="project-venue">In progress</span>
+                            </div>
+                            <p class="project-summary">
+                                Probing how concepts organize in SAE latents across Gemma Scope model scales. Scaling appears to yield fractal
+                                compositional expansion rather than convergence to atomic features; narrow models collapse high-frequency
+                                concepts into coarse superpositions.
+                            </p>
+                            <div class="pub-links">
+                                <a href="notes.html">Notes</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+     
+                <!-- </div>
+            <aside class="sidebar" id="news">
+                <h2>News</h2>
+                <ul class="news-list">
+
+                    <li class="news-item">
+                        <span class="news-date">2026</span>
+                        <span class="news-body">Two interpretability projects in progress: SAE concept formation across model scale, and cutting information leakage in concept bottleneck models.</span>
+                    </li>
+
+                    <li class="news-item">
+                        <span class="news-date">Jan 2026</span>
+                        <span class="news-body">DIAL accepted to <strong>ICLR 2026</strong> &mdash; Label-Free Mitigation of Spurious Correlations in VLMs using Sparse Autoencoders.</span>
+                    </li>
+
+                    <li class="news-item">
+                        <span class="news-date">May 2025</span>
+                        <span class="news-body">&ldquo;Shielding Latent Face Representations From Privacy Attacks&rdquo; accepted at <strong>IEEE FG 2025</strong>.</span>
+                    </li>
+                    <li class="news-item">
+                        <span class="news-date">Jan 2025</span>
+                        <span class="news-body">Started my PhD at the University at Buffalo, supported by the <strong>UB Presidential Fellowship</strong>.</span>
+                    </li>
+                </ul>
+            </aside>
+
+            </div> -->
+        </div>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Bharat Yalavarthi</p>
+             <a href="mailto:bharatcy2@gmail.com">bharatcy2@gmail.com</a></p>
         </div>
     </footer>
 
